@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const SelectInput = ({name, label, onChange, defaultOption, value, error, options}) => {
+  console.log(options);
   return (
     <div className="form-group">
       <label htmlFor={name}>{label}</label>
