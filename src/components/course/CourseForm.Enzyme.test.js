@@ -20,8 +20,6 @@ function setup(saving) {
 
 describe ('CourseForm via Enzyme', () => {
 
-  console.log('Enzyme test');
-
   it('renders form and h1', () => {
     const wrapper = setup(false);
 
@@ -33,15 +31,12 @@ describe ('CourseForm via Enzyme', () => {
   it('save button is labeled "Save" when not saving', () => {
     const wrapper = setup(false);
     expect(wrapper.find('input').props().value).toBe('Save');
-  })
+  });
 
   it('save button is labeled "Saving..." when not saving', () => {
     const wrapper = setup(true);
     expect(wrapper.find('input').props().value).toBe('Saving...');
 
-  })
-
-
-  console.log('Done Enzyme test');
-
+  });
+  
 });

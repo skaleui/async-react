@@ -20,7 +20,6 @@ function CourseForm({course, allAuthors, onSave, onChange, saving, errors}) {
         value={course.authorId}
         defaultOption="Select Author"
         options={allAuthors.map( author => {
-            console.log(author);
           return {
             value: author.value,
             text: author.text

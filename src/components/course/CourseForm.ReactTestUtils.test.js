@@ -16,7 +16,7 @@ function setup(saving) {
   let renderer = TestUtils.createRenderer();
   renderer.render(<CourseForm {...props}/>);
   let output = renderer.getRenderOutput();
-  
+
   return {
     props,
     output,
@@ -40,15 +40,11 @@ describe ('CourseForm via React test utils', () => {
     const { output } = setup(false);
     const submitButton = output.props.children[5];
     expect(submitButton.props.value).toBe('Save');
-  })
+  });
 
   it('save button is labeled "Saving..." when not saving', () => {
     const { output } = setup(true);
     const submitButton = output.props.children[5];
     expect(submitButton.props.value).toBe('Saving...');
-  })
-
-
-
-
+  });
 });

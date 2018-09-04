@@ -39,7 +39,7 @@ export class ManageCoursePage extends React.Component {
     let errors = {};
 
     if(this.state.course.title.length < 5){
-      errors.title = 'Title must be at least 5 characters.'
+      errors.title = 'Title must be at least 5 characters.';
       formIsValid = false;
     }
 
@@ -110,7 +110,7 @@ function mapStateToProps(state, ownProps) {
   if(courseId && state.courses.length > 0){
     course = getCourseById(state.courses, courseId);
   }
-  
+
   return {
     course: course,
     authors: authorsFormattedForDropdown(state.authors)
